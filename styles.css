@@ -1,0 +1,54 @@
+*{
+  padding:0;
+  margin: 0;
+  box-family: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:image-set: back.jpg;
+    background-size: cover;
+    background-position: center;
+}
+
+head{
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 20px 100px;;
+    background-color:(255,255.255,0,2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    display: block;
+    list-style: block;
+    list-style-type: disc;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
