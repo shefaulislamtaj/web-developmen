@@ -1,57 +1,167 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web</title>
+    
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
-    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
 </head>
-<body>
+<body id="page1">
     <header>
-        <h1>My bOOK</h1>
+        <h1>Online Shop</h1>
         <div class="navigation">
-            <input type="checkbox" id="check">
-            <label for="check" class="check_btn">
-                <i class="fas fa-bars"></i>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </label>
-        </div>
-    </header>
-    <main>
-        <div class="cover_box">
-            <div class="form-box login"> 
-                <form action="#"> 
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span> 
-                        <input type="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span> 
-                        <input type="password" required> 
-                        <label>Password</label>
-                    </div> 
-                    <button type="submit" class="btn">Login</button> 
-                    <div class="forgot-password">
-                        <a href="#">Forgot Password</a>
-                    </div>
-                </form>
-                <div class="login-register">
-                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+            <!--<input type="checkbox" id="check">
+        <label for="check" class="check_btn">
+            <!<i class="fas fa-bars"></i>-->
+               
+        </label>
+            
+    </div>
+</header>
+
+<main>
+    <div class="cover_box">
+        <div class="form-box login" id="login-form">
+            <form id="loginForm" method="post" action="">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" id="email" name="email" value="shefaul.taj@gmail.com" required>
+                    <label>Email</label>
                 </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" id="password" name="password" value="213243546576879809" required>
+                    <label>Password</label>
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">
+                        <i class="fas fa-eye" id="togglePassword"></i>
+                    </span>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password</a>
+                </div>
+            </form>
+            <div class="login-register">
+                <p>Don't have an account? <a href="#" class="register-link" onclick="showRegisterForm()">Register</a></p>
             </div>
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+        <div class="form-box register" id="register-form" style="display: none;">
+            <form id="registerForm" method="post" action="">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" id="reg-email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <input type="tel" id="mobile" name="mobile" required>
+                    <label>Mobile Number</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="location-outline"></ion-icon></span>
+                    <input type="text" id="zip" name="zip" required>
+                    <label>ZIP Code</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" id="reg-password" name="password" required>
+                    <label>Password</label>
+                    <span class="toggle-password" onclick="toggleRegPasswordVisibility()">
+                        <i class="fas fa-eye" id="toggleRegPassword"></i>
+                    </span>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link" onclick="showLoginForm()">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="loader" id="loader"></div>
+</main>
+<footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    function togglePasswordVisibility() {
+        const password = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+        if (password.type === "password") {
+            password.type = "text";
+            togglePassword.classList.remove("fa-eye");
+            togglePassword.classList.add("fa-eye-slash");
+        } else {
+            password.type = "password";
+            togglePassword.classList.remove("fa-eye-slash");
+            togglePassword.classList.add("fa-eye");
+        }
+    }
+
+    function toggleRegPasswordVisibility() {
+        const password = document.getElementById("reg-password");
+        const togglePassword = document.getElementById("toggleRegPassword");
+        if (password.type === "password") {
+            password.type = "text";
+            togglePassword.classList.remove("fa-eye");
+            togglePassword.classList.add("fa-eye-slash");
+        } else {
+            password.type = "password";
+            togglePassword.classList.remove("fa-eye-slash");
+            togglePassword.classList.add("fa-eye");
+        }
+    }
+
+    function showRegisterForm() {
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("register-form").style.display = "block";
+    }
+
+    function showLoginForm() {
+        document.getElementById("register-form").style.display = "none";
+        document.getElementById("login-form").style.display = "block";
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const loader = document.getElementById('loader');
+        loader.style.display = 'block';
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        console.log('Login:', { email, password });
+
+        // Simulate a delay for demonstration purposes
+        setTimeout(() => {
+            loader.style.display = 'none';
+            window.location.href = 'dashboard.html';
+        }, 2000);
+    });
+
+    document.getElementById('registerForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const loader = document.getElementById('loader');
+        loader.style.display = 'block';
+
+        const email = document.getElementById('reg-email').value;
+        const mobile = document.getElementById('mobile').value;
+        const zip = document.getElementById('zip').value;
+        const password = document.getElementById('reg-password').value;
+        console.log('Register:', { email, mobile, zip, password });
+
+        // Simulate a delay for demonstration purposes
+        setTimeout(() => {
+            loader.style.display = 'none';
+            window.location.href = 'dashboard.html';
+        }, 2000);
+    });
+</script>
 </body>
 </html>
+
+

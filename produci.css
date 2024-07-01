@@ -1,0 +1,246 @@
+/* Resetting default browser styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Background for page 1 */
+  #page1 {
+    background-image: url('images/back-photo.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Background for page 2 */
+  #page2 { 
+    background-image: url('images/back-photo-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Ensuring header is above the background */
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navigation ul li {
+    margin: 0 15px;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* Main content styling */
+  .main-container {
+    display: flex;
+    width: 100%;
+    padding-top: 80px; /* Offset for the fixed header */
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Sidebar styling for page 2 */
+  .sidebar {
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensuring sidebar is above the background */
+    position: fixed;
+    top: 80px; /* Below the fixed header */
+    bottom: 0;
+    overflow-y: auto;
+  }
+  
+  .sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar-menu li a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .sidebar-menu li a.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Additional styling for page 1 forms */
+  .cover_box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensuring form is above the background */
+  }
+  
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px; /* Added width for better layout */
+  }
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+  }
+  
+  .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: -5px;
+    font-size: 12px;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .btn {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Added margin for spacing between buttons */
+  }
+  
+  .google-login {
+    background-color: #fff; /* Changed to white */
+    color: #000; /* Black text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000; /* Added border for visibility */
+  }
+  
+  .google-login i {
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .login-register {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Footer styling */
+  footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 1; /* Ensuring footer is above the background */
+  }
+  
+  /* Specific styles for page 2 */
+  #page2 .background-image {
+    background-image: url('images/after-log.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Adjust text color as needed */
+  }
+  
+  /* Bootstrap overrides */
+  .product-section .navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+  }
+  
+  .product-section .jumbotron {
+    margin-bottom: 0;
+  }
+  
+  .product-section footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
+  

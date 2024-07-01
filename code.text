@@ -1,0 +1,284 @@
+
+Dashboard________________________________________________________________
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <div class="navigation">
+            <input type="checkbox" id="check">
+            <label for="check" class="check_btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#bin">Bin</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- <div class="loader"><img src="images/after-log.jpg" alt=""></div> -->
+
+    <!-- Add your image here -->
+    <img src="after-log.jpg" alt="Description of the photo" style="width:10%; height:auto;">
+
+    <main>
+        <section id="home">
+            <h2>Welcome to the Dashboard</h2>
+            <p>Here you can manage your products, view your bin, check your orders, and contact us.</p>
+        </section>
+        <section id="product">
+            <h2>Product</h2>
+            <p>Manage your products here.</p>
+        </section>
+        <section id="bin">
+            <h2>Bin</h2>
+            <p>View items in your bin.</p>
+        </section>
+        <section id="order">
+            <h2>Order</h2>
+            <p>Check your orders here.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch with us.</p>
+        </section>
+    </main>
+    <footer>
+        <!--<p>All rights reserved.</p>-->
+    </footer>
+</body>
+</html>
+Dashboard.css_______________________________
+
+body {
+    background-image: url('images/after-log.jpg');
+    font-family: 'Poppins', sans-serif;
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: red;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navigation ul li {
+    margin: 0 15px;
+}
+
+.navigation ul li a {
+    color: pink;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.cover_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-box {
+    background-color: palegreen;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #666;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-register a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+Dashboard.html__________________________-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>after-log</h1>
+        <div class="navigation">
+            <input type="checkbox" id="check">
+            <label for="check" class="check_btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="sidebar-menu">
+                <!--<li><a href="#home" class="button">Home</a></li>
+                <li><a href="#product" class="button">Product</a></li>
+                <li><a href="#bin" class="button">Bin</a></li>
+                <li><a href="#order" class="button">Order</a></li>
+                <li><a href="#contact" class="button">Contact</a></li>-->
+            </ul>
+        </div>
+    </header>
+    
+    <!--<img src="after-log.jpg" alt="Description of the photo" style="width:10%; height:auto;">-->
+    <main>
+        <section id="home">
+            <h2>Welcome to the Dashboard</h2>
+            <p>Here you can manage your products, view your bin, check your orders, and contact us.</p>
+        </section>
+        <section id="product">
+            <h2>Product</h2>
+            <p>Manage your products here.</p>
+        </section>
+        <section id="bin">
+            <h2>Bin</h2>
+            <p>View items in your bin.</p>
+        </section>
+        <section id="order">
+            <h2>Order</h2>
+            <p>Check your orders here.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch with us.</p>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

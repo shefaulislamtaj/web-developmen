@@ -1,0 +1,449 @@
+
+index------------------------______________
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Online Shop</h1>
+        <div class="navigation">
+            <!--<input type="checkbox" id="check">
+        <label for="check" class="check_btn">
+            <!<i class="fas fa-bars"></i>-->
+               
+            </label>
+            
+        </div>
+    </header>
+    
+    <main>
+        <div class="cover_box">
+            <div class="form-box login" id="login-form">
+                <form id="loginForm" method="post" action="">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" id="email" name="email" value="shefaul.taj@gmail.com" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="password" id="password" name="password" value="213243546576879809" required>
+                        <label>Password</label>
+                        <span class="toggle-password" onclick="togglePasswordVisibility()">
+                            <i class="fas fa-eye" id="togglePassword"></i>
+                        </span>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="forgot-password">
+                        <a href="#">Forgot Password</a>
+                    </div>
+                </form>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link" onclick="showRegisterForm()">Register</a></p>
+                </div>
+            </div>
+            <div class="form-box register" id="register-form" style="display: none;">
+                <form id="registerForm" method="post" action="">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" id="reg-email" name="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                        <input type="tel" id="mobile" name="mobile" required>
+                        <label>Mobile Number</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="location-outline"></ion-icon></span>
+                        <input type="text" id="zip" name="zip" required>
+                        <label>ZIP Code</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="password" id="reg-password" name="password" required>
+                        <label>Password</label>
+                        <span class="toggle-password" onclick="toggleRegPasswordVisibility()">
+                            <i class="fas fa-eye" id="toggleRegPassword"></i>
+                        </span>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link" onclick="showLoginForm()">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="loader" id="loader"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   <script>
+        function togglePasswordVisibility() {
+            const password = document.getElementById("password");
+            const togglePassword = document.getElementById("togglePassword");
+            if (password.type === "password") {
+                password.type = "text";
+                togglePassword.classList.remove("fa-eye");
+                togglePassword.classList.add("fa-eye-slash");
+            } else {
+                password.type = "password";
+                togglePassword.classList.remove("fa-eye-slash");
+                togglePassword.classList.add("fa-eye");
+            }
+        }
+
+        function toggleRegPasswordVisibility() {
+            const password = document.getElementById("reg-password");
+            const togglePassword = document.getElementById("toggleRegPassword");
+            if (password.type === "password") {
+                password.type = "text";
+                togglePassword.classList.remove("fa-eye");
+                togglePassword.classList.add("fa-eye-slash");
+            } else {
+                password.type = "password";
+                togglePassword.classList.remove("fa-eye-slash");
+                togglePassword.classList.add("fa-eye");
+            }
+        }
+
+        function showRegisterForm() {
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("register-form").style.display = "block";
+        }
+
+        function showLoginForm() {
+            document.getElementById("register-form").style.display = "none";
+            document.getElementById("login-form").style.display = "block";
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const loader = document.getElementById('loader');
+            loader.style.display = 'block';
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            console.log('Login:', { email, password });
+
+            // Simulate a delay for demonstration purposes
+            setTimeout(() => {
+                loader.style.display = 'none';
+                window.location.href = 'dashboard.html';
+            }, 2000);
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const loader = document.getElementById('loader');
+            loader.style.display = 'block';
+
+            const email = document.getElementById('reg-email').value;
+            const mobile = document.getElementById('mobile').value;
+            const zip = document.getElementById('zip').value;
+            const password = document.getElementById('reg-password').value;
+            console.log('Register:', { email, mobile, zip, password });
+
+            // Simulate a delay for demonstration purposes
+            setTimeout(() => {
+                loader.style.display = 'none';
+                window.location.href = 'dashboard.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>-->
+
+
+dashboard_________________________________________--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>
+        <h1>Online Shop</h1>
+        <div class="navigation">
+            <!--<input type="checkbox" id="check">-->
+            <!--<label for="check" class="check_btn">-->
+                <!--<i class="fas fa-bars"></i>-->
+            </label>
+            <ul class="sidebar-menu">
+                <!--<ul class="left-side">-->
+                    <li><a href="#product" class="button"><i class="fas fa-cube"></i> Product</a></li>
+                    <li><a href="#bin" class="button"><i class="fas fa-trash-alt"></i> Bin</a></li>
+                    <li><a href="#order" class="button"><i class="fas fa-shopping-cart"></i> Order</a></li>
+                    <li><a href="#contact" class="button"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="#shop" class="button"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="#call" class="button"><i class="fas fa-phone"></i> Call</a></li>
+                    <li><a href="#customer" class="button"><i class="fas fa-user"></i> Customer</a></li>
+                    <li><a href="#info" class="button"><i class="fas fa-info-circle"></i> Info</a></li>
+                    <li><a href="#history" class="button"><i class="fas fa-book"></i> History</a></li>
+                    <li><a href="#delivery" class="button"><i class="fas fa-motorcycle"></i> Delivery</a></li>
+                    <li><a href="#about-us" class="button"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="#notifications" class="button"><i class="fas fa-bell"></i> Notifications</a></li>
+                    >
+            </ul>
+            
+        </div>
+    </header>
+    
+    
+ <!--<img src="logo.jpg" alt="aftet-log.jpg" >
+    
+    <main>
+        
+    </main>
+    <footer>
+
+    </footer>
+    </footer>
+</body>
+</html>
+
+CSS________________________________________
+/* Resetting default browser styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background for page 1 */
+#page1 {
+  background-image: url('images/back-photo.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Background for page 2 */
+#page2 { 
+  background-image: url('images/back-photo-2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header styling */
+header {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1; /* Ensuring header is above the background */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navigation ul li {
+  margin: 0 15px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Main content styling */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 80px; /* Offset for the fixed header */
+  z-index: 0;
+}
+
+.cover_box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensuring form is above the background */
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px; /* Added width for better layout */
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  background: transparent;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  font-size: 12px;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px; /* Added margin for spacing between buttons */
+}
+
+.google-login {
+  background-color: #fff; /* Changed to white */
+  color: #000; /* Black text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000; /* Added border for visibility */
+}
+
+.google-login i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-register {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Footer styling */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  z-index: 1; /* Ensuring footer is above the background */
+}
+
+/* Specific styles for page 2 */
+#page2 .background-image {
+  background-image: url('images/logo.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: #333; /* Adjust text color as needed */
+}
+
+/* Additional styling for header and sidebar */
+#page2 header {
+  background-color: wheat; /* Example background color for header */
+  padding: 20px;
+  text-align: center;
+}
+
+#page2 .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#page2 .sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#page2 .sidebar-menu li {
+  margin-bottom: 10px;
+}
+
+#page2 .sidebar-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+#page2 .sidebar-menu li a:hover {
+  background-color: #f0f0f0;
+}
